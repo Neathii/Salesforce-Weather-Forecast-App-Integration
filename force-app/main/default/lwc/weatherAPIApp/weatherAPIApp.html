@@ -1,0 +1,47 @@
+<template>
+    <lightning-card title="Weather Forecasting">
+        <div class="slds-m-around_medium">
+            <lightning-input label="Enter Country/State/City" onchange={handleCity}></lightning-input>
+            <lightning-button class="slds-m-top_medium" label="Fetch Weather" variant="brand" onclick={handleGetWeather}></lightning-button>
+            <lightning-button label="Save Weather to Org" onclick={handleSaveWeatherToOrg}></lightning-button>
+          <!--  <lightning-button label="Refresh Weather List" onclick={handleRefresh}></lightning-button> -->
+        </div>
+
+        <template if:true={isLoading}>
+            <lightning-spinner alternative-text="Loading..."></lightning-spinner>
+        </template>
+        
+        <template if:true={weatherIcon}>
+            <div class="slds-m-around_medium">
+                <img src={weatherIcon} alt="Weather Icon" />
+                <strong>{weatherText}</strong>
+            </div>
+        </template>
+    </lightning-card>
+
+    <lightning-card title="Saved Weather Records">
+        <template if:true={weatherReports}>
+            <table class="slds-table slds-table_cell-buffer">
+                <thead>
+                    <tr>
+                        <th>City</th>
+                        <th>Condition</th>
+                        <th>Created Date</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <template for:each= {weatherReports} for:item = "report">
+                        <tr key={report.Id}>
+                            <td>{report.City__c}</td>
+                            <td>{report.Condition__c}</td>
+                            <td>{report.CreatedDate}</td>
+                        </tr>
+                    </template>
+                </tbody>
+            </table>
+        </template>
+        <template if:false={weatherReports}>
+            <p class="slds-p-around_medium">No weather reports found.</p>
+        </template>
+    </lightning-card>
+</template>

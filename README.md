@@ -1,38 +1,18 @@
-# Weather Forecast App 🌤️  
+# Salesforce DX Project: Next Steps
 
-A Salesforce Lightning Web Component (LWC) application that integrates with an external Weather API using Apex REST callouts and Named Credentials. The app fetches real-time weather data, allows saving forecasts asynchronously with Queueable Apex, and displays stored weather reports in a Lightning Data Table.  
+Now that you’ve created a Salesforce DX project, what’s next? Here are some documentation resources to get you started.
 
----
+## How Do You Plan to Deploy Your Changes?
 
-## 🚀 Features  
+Do you want to deploy a set of changes, or create a self-contained application? Choose a [development model](https://developer.salesforce.com/tools/vscode/en/user-guide/development-models).
 
-- 🌍 **Real-Time Weather Data**  
-  - Fetches weather details from an external API via Apex REST callouts.  
-  - Uses **Named Credential + External Credentials** for secure authentication.  
+## Configure Your Salesforce DX Project
 
-- ⚡ **Async Save to Salesforce**  
-  - Implemented **Queueable Apex** to save weather data asynchronously.  
-  - Keeps the UI responsive while records are inserted.  
+The `sfdx-project.json` file contains useful configuration information for your project. See [Salesforce DX Project Configuration](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_ws_config.htm) in the _Salesforce DX Developer Guide_ for details about this file.
 
-- 🔗 **REST Resource Extension**  
-  - Designed a separate **REST Resource class** for handling POST requests (future-ready).  
+## Read All About It
 
-- 🔔 **Toast Notifications**  
-  - Displays success/error messages in LWC after operations.  
-
-- 📊 **Data Table Display**  
-  - Shows saved weather reports in a Lightning Data Table within the same component.  
-
-- 🛠️ **Utility Bar Component**  
-  - Packaged as a Utility Bar component for easy access inside Salesforce Lightning Apps.  
-
----
-
-## 🛠️ Tech Stack  
-
-- **Salesforce Apex** (REST Callouts, Queueable, REST Resource)  
-- **Lightning Web Components (LWC)**  
-- **Named Credentials + External Credentials**  
-- **Utility Bar Configuration**  
-
----
+- [Salesforce Extensions Documentation](https://developer.salesforce.com/tools/vscode/)
+- [Salesforce CLI Setup Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_setup.meta/sfdx_setup/sfdx_setup_intro.htm)
+- [Salesforce DX Developer Guide](https://developer.salesforce.com/docs/atlas.en-us.sfdx_dev.meta/sfdx_dev/sfdx_dev_intro.htm)
+- [Salesforce CLI Command Reference](https://developer.salesforce.com/docs/atlas.en-us.sfdx_cli_reference.meta/sfdx_cli_reference/cli_reference.htm)
